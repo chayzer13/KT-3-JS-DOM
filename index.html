@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Выпадающее меню</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul class="menu">
+        <li class="has-submenu">Книги
+            <ul class="submenu">
+                <li class="has-submenu">Отечественные
+                    <ul class="submenu">
+                        <li>Комедии</li>
+                        <li>Военные</li>
+                        <li>Любовные</li>
+                    </ul>
+                </li>
+                        <li class="has-submenu">Зарубежные
+                    <ul class="submenu">
+                        <li>Детективы</li>
+                        <li>Научная фантастика</li>
+                        <li>Исторические</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="has-submenu">DVD
+            <ul class="submenu">
+                <li class="has-submenu">Отечественные
+                    <ul class="submenu">
+                        <li>Детективы</li>
+                        <li>Научная фантастика</li>
+                        <li>Исторические</li>
+                    </ul>
+                </li>
+                <li class="has-submenu">Зарубежные
+                    <ul class="submenu">
+                        <li>Комедии</li>
+                        <li>Военные</li>
+                        <li>Любовные</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.has-submenu', '.has-subdot');
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    const submenu = this.querySelector('.submenu');
+                    if (submenu) {
+                        submenu.classList.toggle('show');
+                    } else {
+                        alert('Переход по ссылке');
+                    }
+                });
+            });
+        });
+
+    </script>
+</body>
+</html>
