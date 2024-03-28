@@ -6,16 +6,16 @@
 </head>
 <body>
     <ul class="menu">
-        <li class="has-submenu">Книги
+        <li class="link-submenu">Книги
             <ul class="submenu">
-                <li class="has-submenu">Отечественные
+                <li class="link-submenu">Отечественные
                     <ul class="submenu">
                         <li>Комедии</li>
                         <li>Военные</li>
                         <li>Любовные</li>
                     </ul>
                 </li>
-                        <li class="has-submenu">Зарубежные
+                        <li class="link-submenu">Зарубежные
                     <ul class="submenu">
                         <li>Детективы</li>
                         <li>Научная фантастика</li>
@@ -24,16 +24,16 @@
                 </li>
             </ul>
         </li>
-        <li class="has-submenu">DVD
+        <li class="link-submenu">DVD
             <ul class="submenu">
-                <li class="has-submenu">Отечественные
+                <li class="link-submenu">Отечественные
                     <ul class="submenu">
                         <li>Детективы</li>
                         <li>Научная фантастика</li>
                         <li>Исторические</li>
                     </ul>
                 </li>
-                <li class="has-submenu">Зарубежные
+                <li class="link-submenu">Зарубежные
                     <ul class="submenu">
                         <li>Комедии</li>
                         <li>Военные</li>
@@ -46,7 +46,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const menuItems = document.querySelectorAll('.has-submenu', '.has-subdot');
+            const menuItems = document.querySelectorAll('.link-submenu');
 
             menuItems.forEach(item => {
                 item.addEventListener('click', function(event) {
